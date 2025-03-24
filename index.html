@@ -118,6 +118,63 @@
             box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.15);
         }
 
+        .bu-bottom {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+        }
+
+        .bu-button {
+            display: flex;
+            justify-items: center;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .bu-img-bottom {
+            width: 50px;
+            height: 50px;
+
+        }
+
+        /* Mobile-Specific Footer Styles */
+        @media (max-width: 768px) {
+            footer {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                padding: 20px;
+            }
+
+            .bu-button {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+            }
+
+            .bu-bottom {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                gap: 10px;
+            }
+
+            .bu-img-bottom {
+                width: 40px;
+                height: 40px;
+            }
+
+            button {
+                width: auto;
+                padding: 10px 15px;
+                text-align: center;
+            }
+        }
+
+        /* Mobile-Specific Styles */
         @media (max-width: 768px) {
             #menuButton {
                 display: block;
@@ -151,19 +208,52 @@
 
     <div class="container">
         <div class="buttons" id="dropdownMenu">
-            <button onclick="loadTask('basic.html')"><i class="fas fa-tasks"></i> Task 1</button>
-            <button onclick="loadTask('hover.html')"><i class="fas fa-mouse-pointer"></i> Task 2</button>
-            <button onclick="loadTask('alert.html')"><i class="fas fa-exclamation-circle"></i> Task 3</button>
-            <button onclick="loadTask('stars.html')"><i class="fas fa-star"></i> Task 4</button>
+            <button onclick="loadTask('basic.html')">Task 1</button>
+            <button onclick="loadTask('hover.html')">Task 2</button>
+            <button onclick="loadTask('alert.html')">Task 3</button>
+            <button onclick="loadTask('stars.html')">Task 4</button>
+            <button onclick="loadTask('calculator.html')">Task 5</button>
+            <button onclick="loadTask('normal-grade.html')">Task 6</button>
+            <button onclick="loadTask('grade.html')">Task 7</button>
+            <button onclick="loadTask('student_info.html')">Task 8</button>
+            <button onclick="loadTask('form.html')">Task 9</button>
+            <button onclick="loadTask('page-change-color.html')">Task 10</button>
         </div>
 
         <div class="content">
-            <iframe id="contentFrame"></iframe>
+            <iframe id="contentFrame" src="basic.html"></iframe>
         </div>
     </div>
 
     <footer>
-        <p>© 2025 BMR. All rights reserved.</p>
+        <div class="bu-button">
+
+            <div class="bu-bottom" style="margin-left: 30px;">
+                <a href="https://twitter.com" target="_blank" class="bu-bottom" style="text-decoration: none;">
+                    <button>Twitter</button>
+                    <img class=" bu-img-bottom" src="./resources/twitter.png" alt="Twitter img">
+                </a>
+
+            </div>
+            <div class="bu-bottom" style="margin-left: 30px;">
+                <a href="https://instagram.com" target="_blank" class="bu-bottom" style="text-decoration: none;">
+                    <button>Instagram</button>
+                    <img class=" bu-img-bottom" src="./resources/instagram.png" alt="Instagram img">
+                </a>
+
+            </div>
+            <div class="bu-bottom" style="margin-left: 30px;">
+                <a href="https://linkedin.com" target="_blank" class="bu-bottom" style="text-decoration: none;">
+                    <button>LinkedIn</button>
+                    <img class="bu-img-bottom" src="./resources/linkedin.png" alt="LinkedIn img">
+                </a>
+            </div>
+            <div style="margin-left: 30px;">
+                <p>© 2025 BMR. All rights reserved.</p>
+
+            </div>
+
+        </div>
     </footer>
 
     <script>
